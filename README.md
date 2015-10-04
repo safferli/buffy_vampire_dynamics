@@ -1,0 +1,1 @@
+Population simulation of Buffy vampires and humans in Sunnydale. Based on [Brian Thomas' paper](http://spiff.rit.edu/classes/phys317/buffy/vampecology.htm). 
