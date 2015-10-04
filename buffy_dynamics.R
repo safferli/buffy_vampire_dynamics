@@ -81,10 +81,10 @@ simulate.vampires <- function(periods = 50, H, V) {
   
   # loop through periods, start at 2
   for (i in (seq_len(periods)+1)) {
-    humans[i] <- humans[i-1] + dH.dt(humans[i-1], vampires[i-1])
     dH[i] <- dH.dt(humans[i-1], vampires[i-1])
-    vampires[i] <- vampires[i-1] + dV.dt(humans[i-1], vampires[i-1])
+    humans[i] <- humans[i-1] + dH[i]
     dV[i] <- dV.dt(humans[i-1], vampires[i-1])
+    vampires[i] <- vampires[i-1] + dV[i]
   }
   
   # return all as data.frame
