@@ -70,10 +70,7 @@ dV.dt <- function(H, V) {
 ## simulation loop
 simulate.vampires <- function(periods = 50, H, V) {
   # initialise vectors at correct size for speed
-  humans <- rep(NA, periods+1)
-  dH <- rep(NA, periods+1)
-  vampires <- rep(NA, periods+1)
-  dV <- rep(NA, periods+1)
+  humans <- dH <- vampires <- dv <- rep(NA, periods+1)
   
   # initial populations
   humans[1] <- H
